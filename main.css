@@ -35,27 +35,27 @@ body {
     grid-template-rows: repeat(3, minmax(0, auto));
 }
 
-#container nav {
+nav {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column: 1/13;
     padding: 5px;
 }
 
-#container nav .dropDown {
+nav .dropDown {
     display: none;
 }
 
-#container nav .canceldrop {
+nav .canceldrop {
     display: none;
 }
 
-#container nav img {
+nav img {
     grid-column: 2/3;
     grid-row: 1/2;
 }
 
-#container nav ul {
+nav ul {
     display: flex;
     grid-column: 9/12;
     grid-row: 1/2;
@@ -64,7 +64,7 @@ body {
 
 }
 
-#container nav li {
+nav li {
     margin-left: 20px;
     list-style-type: none;
     margin-top: 5px;
@@ -72,7 +72,7 @@ body {
     font-weight: 700;
 }
 
-#container nav li span.circle {
+nav li span.circle {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -81,12 +81,12 @@ body {
     margin: auto 10px;
 }
 
-#container nav li a {
+nav li a {
     color: black;
     text-transform: uppercase;
 }
 
-#container main {
+main {
     grid-column: 1/13;
     margin-top: 100px;
     display: grid;
@@ -159,6 +159,7 @@ main #right {
         grid-column: 11/12;
         grid-row: 1/2;
         padding: 0;
+        cursor: pointer;
     }
 
     #container nav .canceldrop {
@@ -168,27 +169,34 @@ main #right {
         height: 0;
         width: 0;
         overflow: hidden;
+        cursor: pointer;
     }
 
-    #container nav ul {
-        display: block;
+    nav ul {
+        display: none;
         height: 0;
         width: 0;
         overflow: hidden;
         grid-column: 2/12;
         grid-row: 2/3;
-        margin: 30px auto;
+        /* margin: 30px auto; */
         text-align: center;
-        width: 350px;
         background-color: white;
         box-shadow: -3px 5px 10px rgba(128, 128, 128, 0.493);
-        /* transform: translateX(700px); */
+        transform: translateX(700px);
+        position: relative;
+        z-index: 10;
     }
 
     .open {
+        transform: translateX(0);
         height: auto;
-        width: auto;
+        width: 350px;
         overflow: auto;
+        display: block;
+        position: absolute;
+        left: 30px;
+        top: 50px;
     }
 
     .close {
@@ -243,6 +251,7 @@ main #right {
 
     #container main {
         margin-top: 20px;
+        position: static;
     }
 
     main #right {
