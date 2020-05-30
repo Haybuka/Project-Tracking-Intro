@@ -13,7 +13,7 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet"> 
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">  -->
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -22,12 +22,18 @@
  <div id="container">
    <nav>
      <img src="images/logo.svg" alt="">
+     <div class="dropDown">
+       <img src="images/icon-hamburger.svg" alt="">
+     </div>
+     <div class="canceldrop">
+      <img src="images/icon-close.svg" alt="">
+    </div>
      <ul>
       <li><a href="#">Product</a></li>
       <li><a href="#">Features</a></li>
       <li><a href="#">Pricing</a></li>
       <li><span class="circle"></span></li>
-      <li><a href="#">Login</a></li>
+      <li class="login"><a href="#" id="login">Login</a></li>
      </ul>
     
    </nav>
@@ -36,7 +42,7 @@
         <p><span>New</span> Monograph Dashboard</p> 
         <h1>Powerful insights into your team</h1>
         <p> Project planning and time tracking for agile teams</p>
-        <button>Schedule a demo</button> <span id="preview"> to see a live preview</span>
+        <button>Schedule a demo</button> <span id="preview"> to see a preview</span>
       </div>
        <div id="right">
         <img src="images/illustration-devices.svg" alt="">
