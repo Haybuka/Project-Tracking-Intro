@@ -42,11 +42,11 @@ nav {
     padding: 5px;
 }
 
-nav .dropDown {
+.dropDown {
     display: none;
 }
 
-nav .canceldrop {
+.canceldrop {
     display: none;
 }
 
@@ -152,24 +152,14 @@ main #right {
         grid-column: 2/4;
         grid-row: 1/2;
         padding: 0;
+        cursor: pointer;
     }
 
-    #container nav .dropDown {
+    nav .dropDown {
         display: block;
         grid-column: 11/12;
         grid-row: 1/2;
         padding: 0;
-        cursor: pointer;
-    }
-
-    #container nav .canceldrop {
-        display: block;
-        grid-column: 11/12;
-        grid-row: 1/2;
-        height: 0;
-        width: 0;
-        overflow: hidden;
-        cursor: pointer;
     }
 
     nav ul {
@@ -177,18 +167,17 @@ main #right {
         height: 0;
         width: 0;
         overflow: hidden;
-        grid-column: 2/12;
-        grid-row: 2/3;
-        /* margin: 30px auto; */
         text-align: center;
         background-color: white;
         box-shadow: -3px 5px 10px rgba(128, 128, 128, 0.493);
         transform: translateX(700px);
         position: relative;
         z-index: 10;
+        transition: width .35s ease-in-out;
     }
 
     .open {
+        transition: all 3s;
         transform: translateX(0);
         height: auto;
         width: 350px;
